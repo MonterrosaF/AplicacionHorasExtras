@@ -1,0 +1,37 @@
+<h1 class="text-center" style="margin-top: 60px; color:#791097;">ENUNCIADO 3</h1>
+<h4 class="text-center" style="margin-top: 60px;margin-bottom: 40px;">Se consumen los datos de <a href="https://jsonplaceholder.typicode.com/users">https://jsonplaceholder.typicode.com/users</a></h4>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Website</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>
+        {{user.id}}
+      </td>
+      <td>
+        {{user.name}}
+      </td>
+      <td>
+        {{user.username}}
+      </td>
+      <td>
+        {{user.email}}
+      </td>
+      <td>
+        {{user.phone}}
+      </td>
+      <td>
+        {{user.website}}
+      </td>
+    </tr>
+  </tbody>
+</table>

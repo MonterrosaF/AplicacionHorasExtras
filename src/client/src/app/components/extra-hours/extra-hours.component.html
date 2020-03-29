@@ -1,0 +1,178 @@
+<h1 class="text-center" style="margin-top: 40px;margin-bottom: 40px; color:#791097">ENUNCIADO 1</h1>
+
+<div class="card text-white bg-primary mb-3">
+  <div class="card-body">
+    <form (submit)="addExtrahour($event)">
+      <div class="form-group">
+        <label for="documento">Documento</label>
+        <input
+        type="number"
+          name="documento"
+          [(ngModel)]="documento"
+          class="form-control"
+          id="document"
+          placeholder="Documento"
+          />
+        </div>
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input
+          type="text"
+          [(ngModel)]="nombre"
+          name="nombre"
+          class="form-control"
+          id="name"
+          placeholder="Nombres y apellidos"
+          />
+        </div>
+        <div class="form-group">
+          <label for="apellido">Apellido</label>
+          <input
+          type="text"
+          name="apellido"
+          [(ngModel)]="apellido"
+          class="form-control"
+          id="name"
+          placeholder="Nombres y apellidos"
+          />
+        </div>
+        <div class="form-group">
+          <label for="fechaIni">Fecha Inicio</label>
+          <input
+          type="date"
+          name="fechaIni"
+          [(ngModel)]="fechaIni"
+          class="form-control"
+          id="initial_date"
+          placeholder="Fecha inicial"
+          />
+        </div>
+        <div class="form-group">
+        <label for="fechaFin">Fecha Fin</label>
+        <input
+        type="date"
+        name="fechaFin"
+        [(ngModel)]="fechaFin"
+        class="form-control"
+        id="final_date"
+        placeholder="Fecha final"
+        />
+      </div>
+      <div class="form-group">
+        <label for="horarioIni">Horario inicio de turno</label>
+        <input
+        type="time"
+        name="horarioIni"
+        [(ngModel)]="horarioIni"
+        class="form-control"
+        id="iht"
+        placeholder="Horario inicio de turno"
+        />
+      </div>
+      <div class="form-group">
+        <label for="horarioFin">Horario fin de turno</label>
+        <input
+        type="time"
+        name="horarioFin"
+        [(ngModel)]="horarioFin"
+        class="form-control"
+        id="fht"
+        placeholder="Horario fin de turno"
+        />
+      </div>
+      <div class="form-group">
+        <label for="horarioIniExtra">Horario inicio hora extra</label>
+        <input
+        type="time"
+        name="horarioIniExtra"
+        [(ngModel)]="horarioIniExtra"
+        class="form-control"
+        id="ieh"
+        placeholder="Horario inicio hora extra"
+          />
+        </div>
+        <div class="form-group">
+          <label for="horarioFinExtra">Horario fin hora extra</label>
+          <input
+          type="time"
+          name="horarioFinExtra"
+          [(ngModel)]="horarioFinExtra"
+          class="form-control"
+          id="feh"
+          placeholder="Horario fin hora extra"
+          />
+        </div>
+        <div class="form-group">
+          <label for="motivo">Motivo hora extra</label>
+          <input
+          type="text"
+          name="motivo"
+          [(ngModel)]="motivo"
+          class="form-control"
+          id="motivo"
+          placeholder="Motivo hora extra"
+          />
+        </div>
+      <span class="input-group-addon">
+        <button type="submit" class="btn btn-primary">Adicionar registro</button>
+      </span>
+    </form>
+  </div>
+</div>
+<h1 class="text-center" style="margin-top: 60px;margin-bottom: 40px; color:#791097">ENUNCIADO 2</h1>
+
+<table class="table border-primary">
+  <thead>
+    <tr>
+      <th>Documento</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Fecha inicio</th>
+      <th>Fecha fin</th>
+      <th>Horario inicial</th>
+      <th>Horario final</th>
+      <th>Horario inicial extra</th>
+      <th>Horario fin extra</th>
+      <th>Motivo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let extrahour of extrahours">
+      <td>
+        {{extrahour.documento}}
+      </td>
+      <td>
+        {{extrahour.nombre}}
+      </td>
+      <td>
+        {{extrahour.apellido}}
+      </td>
+      <td>
+        {{extrahour.fechaIni}}
+      </td>
+      <td>
+        {{extrahour.fechaFin}}
+      </td>
+      <td>
+        {{extrahour.horarioIni}}
+      </td>
+      <td>
+        {{extrahour.horarioFin}}
+      </td>
+      <td>
+        {{extrahour.horarioIniExtra}}
+      </td>
+      <td>
+        {{extrahour.horarioFinExtra}}
+      </td>
+      <td>
+        {{extrahour.motivo}}
+      </td>
+      <td>
+        <button class="btn btn-danger" (click)="deleteExtrahour(extrahour._id)">
+          <i class="fa fa-trash"></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
