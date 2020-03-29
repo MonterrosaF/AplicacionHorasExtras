@@ -7,7 +7,7 @@ Comandos para ejecutar la aplicacion:
 1. En la carpeta raiz escribir el comando npm i
 2. En la carpeta src/client escribir el comando npm i
 3. Activar el servicio de mongo o escribir mongod en la shell
-4. Ejecutar el comando npm run dev para iniciar el servidor.
+4. Ejecutar el comando npm run dev en la carpeta raiz para iniciar el servidor.
 
 Enunciado 1:
 Se trata de un formulario que contiene los campos solicitados. Este envia la informacion a la tabla del Enunciado 2 y los almacena en la base de datos "teleperformance-db" en la tabla "extraHours" de Mongo
